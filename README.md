@@ -71,9 +71,10 @@ Development Support: Gemini 3.0
 
 ## 프로젝트 구조
 
+```text
 naverblog_ori-downloader_v1.2.3/
-  ├── manifest.json
-  ├── popup.html
-  ├── popup.js
-  ├── icon.png
-  └── jszip.min.js
+├── manifest.json    # 설정 파일
+├── popup.html       # 확장 프로그램 화면
+├── popup.js         # 로직
+├── icon.png         # 아이콘 파일
+└── jszip.min.js     # 압축 라이브러리
