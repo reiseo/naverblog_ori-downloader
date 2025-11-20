@@ -7,6 +7,8 @@ Development Support: Gemini 3.0
 
 개별 다운로드 및 ZIP 압축 다운로드를 지원합니다.
 
++모바일 버전(mblog) & PC 버전(blog) 사이트 모두 호환
+
 
 <img width="1127" height="900" alt="image" src="https://github.com/user-attachments/assets/32315c2b-f5af-493c-83db-2d522dbf6d2a" />
 
