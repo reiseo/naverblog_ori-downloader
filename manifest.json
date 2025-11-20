@@ -10,7 +10,8 @@
   ],
   "host_permissions": [
     "https://*.pstatic.net/*",
-    "https://blog.naver.com/*"
+    "https://blog.naver.com/*",
+    "https://postfiles.pstatic.net/*"
   ],
   "action": {
     "default_popup": "popup.html",
