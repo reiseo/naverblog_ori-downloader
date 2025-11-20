@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "네이버 블로그 원본 다운로더",
+  "version": "1.2.3",
+  "description": "블로그의 사진을 원본으로 다운로드합니다.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.pstatic.net/*",
+    "https://blog.naver.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

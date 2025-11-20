@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 450px; font-family: 'Malgun Gothic', sans-serif; padding: 15px; background: #f9f9f9; }
+    h2 { font-size: 18px; margin: 0 0 15px 0; text-align: center; color: #333; }
+    
+    /* 버튼 스타일 */
+    #controls { display: flex; gap: 5px; margin-bottom: 10px; }
+    button { flex: 1; padding: 10px; cursor: pointer; color: white; border: none; border-radius: 5px; font-weight: bold; transition: 0.2s; }
+    #scanBtn { background: #03c75a; }
+    #scanBtn:hover { background: #02b351; }
+    #downloadBtn { background: #03c75a; }
+    #downloadBtn:hover { background: #02b351; }
+    #zipBtn { background: #4a90e2; }
+    #zipBtn:hover { background: #357abd; }
+
+    #status { text-align: center; font-size: 12px; color: #666; margin-bottom: 5px; height: 15px; }
+    
+    /* 전체 선택 영역 */
+    #toolbar { padding: 8px 5px; border-bottom: 1px solid #ddd; background: #fff; display: flex; align-items: center; font-size: 13px; font-weight: bold;}
+    #toolbar label { cursor: pointer; user-select: none; margin-left: 5px;}
+
+    #image-list { max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-top: none; background: white; }
+    .item { display: flex; align-items: center; padding: 8px; border-bottom: 1px solid #eee; }
+    .item:last-child { border-bottom: none; }
+    .item input[type="checkbox"] { transform: scale(1.2); margin-right: 10px; cursor: pointer; }
+    
+    .item img { width: 60px; height: 60px; object-fit: cover; margin-right: 10px; border-radius: 4px; border: 1px solid #eee; background: #eee;}
+    
+    .info { flex: 1; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+    .filename { font-size: 12px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; color: #333; }
+    
+    /* 해상도 뱃지 스타일 */
+    .meta-info { display: flex; align-items: center; gap: 5px; }
+    .res-badge { font-size: 11px; background: #e8f0fe; color: #1967d2; padding: 2px 6px; border-radius: 4px; font-weight: bold; border: 1px solid #d2e3fc;}
+    .check-msg { font-size: 11px; color: #03c75a; font-weight: bold; }
+  </style>
+  <script src="jszip.min.js"></script>
+</head>
+<body>
+  <h2>네이버 블로그 원본 다운로더</h2>
+  
+  <div id="controls">
+    <button id="scanBtn">스캔하기</button>
+    <button id="downloadBtn">개별 다운</button>
+    <button id="zipBtn">ZIP 압축 다운</button>
+  </div>
+  
+  <div id="status"></div>
+
+  <div id="toolbar">
+    <input type="checkbox" id="selectAllBtn" checked>
+    <label for="selectAllBtn">전체 선택 / 해제</label>
+  </div>
+
+  <div id="image-list">
+    </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
